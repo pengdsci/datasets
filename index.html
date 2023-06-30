@@ -121,8 +121,7 @@
                     <ul class="nav flex-column">
                        <div class="a">   
                            
-                         <li><a href="#binary" class="nav-link active"><center><font color = "darkred" size = 4> <b>Binary Response</b></font></center></a></li><br> 
-                           
+                         <li><a href="#binary" class="nav-link active"><center><font color = "darkred" size = 4><b>Binary Response</b></font></center></a></li><br> 
                             <ul class="nav flex-column">                      
                               <li><a href="#sba-loan">A. SBA Bank Loan Data </a></li>
                               <li><a href="#breast-cancer">B. Synthetic Cancer Data</a></li>
@@ -135,6 +134,7 @@
                               <li><a href ="#FraminghamHeartStudy">I. Framingham Heart Study</a></li>
                               <li><a href="#high-BP">J. High Blood Pressure Data </a></li>  
                               <li><a href="#bankruptcy">K. Polish Company Bankrupcy Data </a></li>  
+                              <li><a href="#bankmarketing">L. Bank Direct Marketing</a></li>  
                             </ul>
                            
     <!--br>
@@ -184,25 +184,22 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                            <br>
                            <li><a href="#wrangling" class="nav-link active"><center><font color = "darkred" size = 4><b>Data Management</b></font></center></a></li><br>
-                           
                            <ul class="nav flex-column"> 
                               <li><a href="#survey">A. Survey Data</a></li>
                               <li><a href="#covid">B. COVID-19 Data Sets</a></li>
                               <li><a href="#cust-seg">C. Customer Segmentation</a></li>
                               <li><a href="#pet-care">D. Pet Care Data Set</a></li>
-                              <li><a href="#ani-survey">E. Animal Survey Data</a></li>
                            </ul>
                            
-                          <br>
+                       <br>
                            <li><a href="#continuous" class="nav-link active"><center><font color = "darkred" size = 4><b>Continuous Response</b></font></center></a></li>
-                           
                             <ul class="nav flex-column">
                                 <li><a href="#cal-housing" class="nav-link">A. California Housing Price </a> </li>              
                                 <li><a href="#taibei-housing" class="nav-link">B. Taipei Real Estate</a> </li>
                                 <li><a href="#life-exp" class="nav-link">C. World Life Expectancy</a> </li>
                                 <li><a href="#flight-delay" class="nav-link">D. Flight Delay Data</a> </li>
                             </ul>
-                          <br>
+                <br>
                         </div>
                     </ul>
                </div>
@@ -526,12 +523,54 @@ Basing on the collected data five classification cases were distinguished, that 
 NationalHealthNutritionSurvey-description.pdf </a> <BR>
 2. Data Sets: &nbsp;&nbsp;|&nbsp;<a href="Bankruptcy/1yearbankrupt.arff">firstyear.csv</a>&nbsp;
                |&nbsp;<a href="Bankruptcy/2yearbankrupt.arff">secondyear.csv</a>&nbsp;
-			   |&nbsp;<a href="Bankruptcy/3yearbankrupt.arff">thirdyear.csv</a>&nbsp;
-               |&nbsp;<a href="Bankruptcy/4yearbankrupt.arff">fourthyear.csv</a>&nbsp;
-               |&nbsp;<a href="Bankruptcy/5yearbankrupt.arff">fifthyear.csv</a>&nbsp;|
+			     |&nbsp;<a href="Bankruptcy/3yearbankrupt.arff">thirdyear.csv</a>&nbsp;
+				  |&nbsp;<a href="Bankruptcy/4yearbankrupt.arff">fourthyear.csv</a>&nbsp;
+				  |&nbsp;<a href="Bankruptcy/5yearbankrupt.arff">fifthyear.csv</a>&nbsp;|
+
 <BR><BR>
 </left><hr>
 
+         
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--                data set 6           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+
+<h3 id="bankmarketing"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">L. Bank Direct Marketing Data</h3>
+<BR><BR>
+    
+<b>TYPE:</b> (Prospective) Observational Health Study<BR><BR>
+    
+<b> SIZE:</b> 45223 records and 17 variables (including the outcome variable) <BR><BR>
+    
+<b> SOURCE: </b> UCI-Machine Learning Repository. 
+				   <a href="https://archive.ics.uci.edu/dataset/222/bank+marketing">
+				   https://archive.ics.uci.edu/dataset/222/bank+marketing</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The data is related with direct marketing campaigns of a Portuguese banking institution. 
+   The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, 
+   in order to access if the product (bank term deposit) would be (or not) subscribed. The data set is ordered by date 
+    (from May 2008 to November 2010). The data set can used for classification or predicting if the client will 
+    subscribe a term deposit (variable y) after the direct marketing campaign.
+    <BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and description are can downloaded in the following links:<br><br>
+    
+1. Data Description: <a href="BankMarketing/bank-names-description.txt"> 
+Background and Variable Definitions </a> <BR>
+    
+2. Data Set: <a href="BankMarketing/BankMarketingCSV.csv">Bank Marketing Data</a> <BR><BR>
+</left><hr>         
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 <h1 id="wrangling" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Data Management</b></h1>
@@ -621,7 +660,7 @@ students and how it can link to self-care as well as success in their future pro
 <b>DOWNLOAD:</b> The data set and variable descrition can be downloaded using the following links.<br><br>
     
 1. Data set: <a href="CustomerSegmentation/Customer-Seg-Data.csv"> Segmentation Data.csv </a> <BR>
-2. Data Dictionary: <a href="CustomerSegmentation/Description-customer-Seg.pdf">Segmentation Data Description.pdf</a> <BR><BR>
+3. Data Dictionary: <a href="CustomerSegmentation/Description-customer-Seg.pdf">Segmentation Data Description.pdf</a> <BR><BR>
 </left>
     
     
@@ -635,7 +674,7 @@ students and how it can link to self-care as well as success in their future pro
     
 <b>TYPE:</b> Observational data<BR><BR>
     
-<b> SIZE:</b>Size and variable count various in individual data set.<BR><BR>
+<b> SIZE:</b>330379 observations.  8 variables.<BR><BR>
     
 <b> SOURCE: </b> <a href="https://www.superdatascience.com/pages/sql">https://www.superdatascience.com/pages/sql</a> <BR><BR>
     
@@ -644,39 +683,12 @@ students and how it can link to self-care as well as success in their future pro
 <b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
     
 1. <a href="PetCareData/PetsInfomation.csv"> Pet Information </a> <BR>
-2. <a href="PetCareData/PetsOwners.csv">Owner Information</a> <BR>
+2 <a href="PetCareData/PetsOwners.csv">Owner Information</a> <BR>
 3. <a href="PetCareData/ProceduresDetails.csv"> Procedure Detail </a> <BR>
 4. <a href="PetCareData/ProceduresHistory.csv">Procedure History</a> <BR><BR>
 </left>
     
-
-    
-    
-<hr>    
-<!--  oooooooooooooooooooooooooooooooooo -->
-<!--        Anaimal Survey Data        -->
-<!--  oooooooooooooooooooooooooooooooooo -->
-                                     
-<h3 id="ani-survey"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">E. Animal Survey Data</h3>
-<br>
-    
-<b>TYPE:</b> Observational data<BR><BR>
-    
-<b> SIZE:</b>Size and variable count various in individual data set.<BR><BR>
-    
-<b> SOURCE: </b> <a href="https://datacarpentry.org/2015-03-09-ISI-CODATA/lessons/sql/sql.html">https://datacarpentry.org/2015-03-09-ISI-CODATA/lessons/sql/sql.html</a> <BR><BR>
-    
-<b> BRIEF DESCRIPTION:</b> This is data on a small mammal community in southern Arizona over the last 35 years. This is part of a larger project studying the effects of rodents and ants on the plant community. The rodents are sampled on a series of 24 plots, with different experimental manipulations of which rodents are allowed to access the plots.<BR><BR>
-    
-<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
-    
-1. <a href="AnimalSurvey/plots.csv"> Plots Information </a> <BR>
-2. <a href="AnimalSurvey/species.csv">Speciesr Information</a> <BR>
-3. <a href="AnimalSurvey/surveys.csv">Survey Information</a> <BR><BR>
-</left>
-        
-    
-    
+       
     
     
     
@@ -690,6 +702,8 @@ students and how it can link to self-care as well as success in their future pro
 <h1 id="continuous" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Continous Response</b></h1>
 <hr>      
 <br>   
+    
+                  
                        
                                   
 <!--  oooooooooooooooooooooooooooooooooo -->
@@ -778,13 +792,8 @@ students and how it can link to self-care as well as success in their future pro
                                  
    <script type='text/javascript'> 
     var divElement = document.getElementById('viz1639669165630');                    
-    var vizElement = divElement.getElementsByTagName('object')[0];                    
-        vizElement.style.width='100%';
-        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-    var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);               
-    </script>                             
+    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               </script>                             
 <br>
                                  
 <b>DOWNLOAD:</b> Data sets can be downloaed from the following link:<br><br>
