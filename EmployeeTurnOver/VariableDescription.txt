@@ -1,0 +1,21 @@
+Variable Description
+
+"stag" - experience (some kind of standardized stay with the organization); 
+"event" - event (1 = left, 0 = stay);      
+"gender"       
+"age"   - missing values were imputed with the mean age.       
+"industry" - industry type    
+"profession" - profession type 
+"traffic" - From what pipelene candidate came to the company;
+"coach" - presence of a coach on probation;
+"head_gender" - gender of the direct head
+"greywage" -  The salary does not seem to the tax authorities;
+"way" - how an employee gets to workplace (by feet, by bus etc);  
+
+ Big5 personality test scales (with 50 items in Likert 5-point Scale)  
+
+"extraversion"  - (outgoing/energetic vs. solitary/reserved)
+"independence"  - Agreeableness (friendly/compassionate vs. critical/rational)
+"selfcontrol" - Conscientiousness (efficient/organized vs. extravagant/careless)
+"anxiety"  - Neuroticism (sensitive/nervous vs. resilient/confident)
+"novator" - openness to experience (inventive/curious vs. consistent/cautious)
