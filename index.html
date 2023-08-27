@@ -21,6 +21,54 @@
         <script src="./stat/django.min.js.download"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
+        <script>
+          /* When the user clicks on the button, 
+             toggle between hiding and showing the dropdown content */
+         function myFunction01() {
+         document.getElementById("myDropdown01").classList.toggle("show");
+             }
+         function myFunction02() {
+         document.getElementById("myDropdown02").classList.toggle("show");
+             }
+         function myFunction03() {
+         document.getElementById("myDropdown03").classList.toggle("show");
+             }
+         function myFunction04() {
+         document.getElementById("myDropdown04").classList.toggle("show");
+             }
+         function myFunction05() {
+         document.getElementById("myDropdown05").classList.toggle("show");
+             }
+         function myFunction06() {
+         document.getElementById("myDropdown06").classList.toggle("show");
+             }
+         function myFunction07() {
+         document.getElementById("myDropdown07").classList.toggle("show");
+             }            
+         function myFunction08() {
+         document.getElementById("myDropdown08").classList.toggle("show");
+             }            
+         function myFunction09() {
+         document.getElementById("myDropdown09").classList.toggle("show");
+             }            
+                                    
+            
+            
+          // Close the dropdown if the user clicks outside of it
+         window.onclick = function(event) {
+               if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+               for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                   openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+       </script>
+            
         <style>
             div.a {
               line-height: 90%;
@@ -50,8 +98,53 @@
             color:red;
             font-weight: 300;
            }
-
         </style>
+            
+         <style>
+            .dropbtn {
+             background-color:  #e6edf3;
+             color: #2980B9;
+             padding: 12px;
+             text-align: center;
+             font-weight: 450;
+             font-size: 16px;
+              border: none;
+              cursor: pointer;
+              }
+
+          .dropbtn:hover, .dropbtn:focus {
+            background-color: white;
+          }
+
+         .dropdown {
+            position: relative;
+              display: inline-block;
+              }
+
+         .dropdown-content {
+             display: none;
+             position: absolute;
+             font-size: 14px;
+             background-color: #f1f1f1;
+              min-width: 260px;
+              overflow: auto;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+           }
+
+         .dropdown-content a {
+            color: black;
+            padding: 6px 8px;
+            text-decoration: none;
+             display: block;
+         }
+         
+           .dropdown-navi a:hover {background-color: deepskyblue;}
+              
+           .show {display: block;}
+      </style>
+   
+            
     </head>
 
     <body class="homepage" style="">
@@ -118,11 +211,16 @@
             <div class="col-md-3">
                <div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary" style="top: 76px;">                 
                  <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+                     <br><b><font size = 4 color = "navy"  style="text-align:center; font-weight: bold">DATA SET TYPES</font></b>
                     <ul class="nav flex-column">
                        <div class="a">   
-                           
-                         <li><a href="#binary" class="nav-link active"><center><font color = "darkred" size = 4><b>Binary Response</b></font></center></a></li><br> 
-                            <ul class="nav flex-column">                      
+
+                  <div class="dropdown-navi">
+                      <center>
+                    <button onclick="myFunction01()" class="dropbtn">Binary Response (16)
+                      <center><font size = 1, color="navy">[Binary regression and classification]</font></center></button>
+                     </center>
+                       <div id="myDropdown01" class="dropdown-content">
                               <li><a href="#sba-loan">A. SBA Bank Loan Data </a></li>
                               <li><a href="#breast-cancer">B. Synthetic Cancer Data</a></li>
                               <li><a href="#loan-default">C. Loan Defualt Data </a></li>
@@ -136,22 +234,126 @@
                               <li><a href="#bankruptcy">K. Polish Company Bankrupcy Data </a></li>  
                               <li><a href="#bankmarketing">L. Bank Direct Marketing</a></li>  
                               <li><a href="#employeeturnover">M. Employee Turnover</a></li>  
-                              <li><a href="#employeeattrition">N. Employee Attrition (Synthetic)</a></li>  
-                            </ul>
-
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                           <br>
-                           <li><a href="#wrangling" class="nav-link active"><center><font color = "darkred" size = 4><b>Data Processing</b></font></center></a></li><br>
-                           <ul class="nav flex-column"> 
+                              <li><a href="#employeeattrition">N. Employee Attrition (Synthetic)</a></li>      
+                              <li><a href="#diabetespred">O. Diabetes Prediction</a></li>   
+                              <li><a href="#strokepred">P. Stroke Prediction</a></li>
+                       </div>
+                      
+                     <!--div class="dropdown-navi"-->
+                      <center>
+                    <button onclick="myFunction02()" class="dropbtn">Continuous Response (6)
+                      <center><font size = 1, color="navy">[Linear and non-linear regression ]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown02" class="dropdown-content">
+                              <li><a href="#cal-housing" class="nav-link">A. California Housing Price </a> </li>              
+                              <li><a href="#taibei-housing" class="nav-link">B. Taipei Real Estate</a> </li>
+                              <li><a href="#life-exp" class="nav-link">C. World Life Expectancy</a> </li>
+                              <li><a href="#flight-delay" class="nav-link">D. Flight Delay Data</a> </li>
+                              <li><a href="#melbourne-house" class="nav-link">E. Melbourne Housing Market</a> </li>
+                              <li><a href="#hr-data" class="nav-link">F. HR Data (People Analytics)</a> 
+                      </div>    
+                      
+                     <!--div class="dropdown-navi"-->
+                      <center>
+                    <button onclick="myFunction03()" class="dropbtn">Discrete Response (14)
+                      <center><font size = 1, color="navy">[Poisson and negative binomial regresion]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown03" class="dropdown-content">
+                              <li><a href="#doctor-visit">A. Doctors' Visits Data </a></li>
+                              <li><a href="#british-fertility">B. British Fertility Data</a></li>
+                              <li><a href="#health-care">C. Healthcare Service Data </a></li>
+                              <li><a href="#rec-trips">D. Recreational Trips Data </a></li>  
+                              <li><a href="#asthma">E. Asthma Data </a></li>
+                              <li><a href="#smoke">F. Smoking Data </a></li>   
+                              <li><a href="#swiss-fertility">G. Swiss Fertility Data </a></li>  
+                              <li><a href="#takeover-bids">H. Takeover Bids Data </a></li>  
+                       </div>
+                      
+                     <!--div class="dropdown-navi"-->
+                      <center>
+                    <button onclick="myFunction04()" class="dropbtn">Multi-category Response (7)
+                      <center><font size = 1, color="navy">[Categorical regression and Classification]</font></center>
+                      </button>
+                          </center>
+                       <div id="myDropdown04" class="dropdown-content">
+                              <li><a href="#amazon-review">A. Amazon Review Data</a></li>
+                              <li><a href="#body-performance">B. Body Performance</a></li>
+                              <li><a href="#customer-churn">C. Customer Churn</a></li>
+                              <li><a href="#customer-segmentation">D. Customer Segmentation</a></li> 
+                              <li><a href="#dematology">E. Dematology Data</a></li>
+                              <li><a href="#health-care">F. Healthcare Data</a></li>
+                              <li><a href="#wine-quality">G. Wine Quality Data</a></li>
+                       </div>
+                      
+                <!--div class="dropdown-navi"-->
+                    <center>
+                    <button onclick="myFunction05()" class="dropbtn">Data Processing (5)
+                      <center><font size = 1, color="navy">[Data sets for data wrangling and SQL]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown05" class="dropdown-content">
                               <li><a href="#survey">A. Survey Data</a></li>
                               <li><a href="#covid">B. COVID-19 Data Sets</a></li>
                               <li><a href="#cust-seg">C. Customer Segmentation</a></li>
-                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>
-                           </ul>
-                           
-                           
+                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
+                              <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li>  
+                       </div>
+                      
+                     <!--div class="dropdown-navi"-->
+                      
+                    <center>
+                    <button onclick="myFunction06()" class="dropbtn">
+                       <a href="https://www.census.gov/econ_timeseries" target="popup" onclick="window.open('https://www.census.gov/econ_timeseries','name','width=900,height=500')"> Time Series Data<br>                     <center><font size = 1, color="darkred">[US Census Bureau Time Series Repository]</font></center></a></button>
+                      </center> 
+                       <div id="myDropdown06" class="dropdown-content"> </div>
+                                            
+                <!--div class="dropdown-navi"-->
+                    <center>
+                    <button onclick="myFunction07()" class="dropbtn">Visualization (0)
+                      <center><font size = 1, color="navy">[Data sets for interactive data visualization]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown07" class="dropdown-content">
+                              <!--li><a href="#survey">A. Survey Data</a></li>
+                              <li><a href="#covid">B. COVID-19 Data Sets</a></li>
+                              <li><a href="#cust-seg">C. Customer Segmentation</a></li>
+                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
+                              <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li-->  
+                       </div>
+                      
+                <!--div class="dropdown-navi"-->
+                    <center>
+                    <button onclick="myFunction08()" class="dropbtn">Type I Left-censored Data (0)
+                      <center><font size = 1, color="navy">[Estimating Population Distributions]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown08" class="dropdown-content">
+                              <!--li><a href="#survey">A. Survey Data</a></li>
+                              <li><a href="#covid">B. COVID-19 Data Sets</a></li>
+                              <li><a href="#cust-seg">C. Customer Segmentation</a></li>
+                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
+                              <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li-->  
+                       </div>                      
+                <!--div class="dropdown-navi"-->
+                    <center>
+                    <button onclick="myFunction098()" class="dropbtn">Correlated Data (0)
+                      <center><font size = 1, color="navy">[Correlated regression modeling and analysis]</font></center>
+                      </button>
+                      </center>
+                       <div id="myDropdown09" class="dropdown-content">
+                              <!--li><a href="#survey">A. Survey Data</a></li>
+                              <li><a href="#covid">B. COVID-19 Data Sets</a></li>
+                              <li><a href="#cust-seg">C. Customer Segmentation</a></li>
+                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
+                              <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li-->  
+                       </div>                       
+                      
+                      
+                  </div>           
          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->                     
-                       <br>
+                       <!--br>
                            <li><a href="#continuous" class="nav-link active"><center><font color = "darkred" size = 4><b>Numeric Response</b></font></center></a></li>
                             <ul class="nav flex-column">
                                 <li><a href="#cal-housing" class="nav-link">A. California Housing Price </a> </li>              
@@ -161,7 +363,7 @@
                                 <li><a href="#melbourne-house" class="nav-link">E. Melbourne Housing Market</a> </li>
                                 <li><a href="#hr-data" class="nav-link">F. HR Data (People Analytics)</a> </li>
                             </ul>
-                <br>
+                <br-->
                         </div>
                     </ul>
                </div>
@@ -182,8 +384,7 @@
 <left>    
 <h2 id="sba-loan" class="section" style="text-align:left;  font-size: 1.5em; font-weight: bold">A. SBA Endorsed Bank Loan Data</h2>
 <br>   
-    
-<b>TYPE:</b> Census  <BR><BR>
+
     
 <b>SIZE:</b> 899,164 observations, 27 variables <BR><BR>
     
@@ -218,8 +419,7 @@
 <left>    
 <h2 id="breast-cancer" class="section" style="text-align:left;  font-size: 1.5em; font-weight: bold">B. Synthetic Breast Cancer Data</h2>
 <br>   
-    
-<b>TYPE:</b> Synthetic Data  <BR><BR>
+
     
 <b>SIZE:</b> 600 observations, 10 variables <BR><BR>
     
@@ -243,8 +443,7 @@
 <left>    
 <h2 id="loan-default" class="section" style="text-align:left;  font-size: 1.5em; font-weight: bold">C. Loan Defualt Data</h2>
 <br>   
-    
-<b>TYPE:</b> Observational Data  <BR><BR>
+
     
 <b>SIZE:</b> 1000 observations, 16 variables <BR><BR>
     
@@ -268,8 +467,7 @@
                                  
 <h3 id="pima-diabetes"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">D. Pima Indans Diabetes Data</h3>
 <br><br>
-        
-<b>TYPE:</b> Observational Medical Data<BR><BR>
+
         
 <b> SIZE:</b> 768 records, 8 feature variables and one binary outcome variable.<BR><BR>
         
@@ -294,8 +492,7 @@ It has been used in numerous researches in computational and clinical sciences. 
                                  
 <h3 id="customer-churn"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">E. Customer Churn Data</h3>
 <br><br>
-        
-<b>TYPE:</b> Observational Data<BR><BR>
+
         
 <b> SIZE:</b> 1000 records,  14 variables (3 numerical,11categorical).<BR><BR>
         
@@ -317,9 +514,7 @@ It has been used in numerous researches in computational and clinical sciences. 
                                  
 <h3 id="credit-fraud"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">F. Credit Card Fraud Data</h3>
         
-<br><br>
-        
-<b>TYPE:</b> Observation Sequential Data<BR><BR>
+<br>
         
 <b> SIZE:</b> 25575 authentic credit cards and 7762 compromised credit cards. Each card has 41 historical transactions dollar amounts as well as the transaction times. For the compromised cards, the most recent transactions are fraudulent. The total number of observations is about 1.4 million.<BR><BR>
         
@@ -347,8 +542,7 @@ It has been used in numerous researches in computational and clinical sciences. 
 <!--  oooooooooooooooooooooooooooooooooooooooooooooooooo -->
                                  
 <h3 id="gas-station"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">G. Gas Station - Point of Compromised (POC)</h3><br> 
-        
-<b>TYPE:</b> Observational Data<BR><BR>
+
                                  
 <b> SIZE:</b> 72798 records, 30 feature variables and one binary outcome variable.<BR><BR>
                                  
@@ -369,8 +563,7 @@ It has been used in numerous researches in computational and clinical sciences. 
 <!--  oooooooooooooooooooooooooooooooooooooooooooooooooo -->
                                  
 <h3 id="emr-diabetes"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">H. The Health Facts - Diabetes Data </h3><br> 
-        
-<b>TYPE:</b> Observational Data<BR><BR>
+
                                  
 <b> SIZE:</b> 101,766 records, 49 feature variables.<BR><BR>
                                  
@@ -404,10 +597,7 @@ system) is preserved.<BR><BR>
 <h3 id="FraminghamHeartStudy"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">I. Framingham Heart Study</h3><br>
 
         
-<b>TYPE:</b> (Prospective) Observational Health Study<BR><BR>
-        
-<b> SIZE:</b> 4240 subjects were included in the data. This a small subset of the data used in the textbook of 
-              Hosmer and Lemeshow. <BR><BR>
+<b> SIZE:</b> 4240 subjects were included in the data. This a small subset of the data used in the textbook of Hosmer and Lemeshow. <BR><BR>
         
 <b> SOURCE:</b> This is a subset of extracted from the study. It can be found in various 
 public domain. The current data can be founs at <a href="https://raw.githubusercontent.com/GauravPadawe/Framingham-Heart-Study/master/framingham.csv"> framingham.csv</a> <BR><BR>
@@ -431,8 +621,7 @@ FraminghamHeartStudy-description.pdf </a> <BR>
 
 <h3 id="high-BP"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">J. National Health and Nutrition Examination Survey (NHANES) Data</h3>
 <BR><BR>
-    
-<b>TYPE:</b> (Prospective) Observational Health Study<BR><BR>
+
     
 <b> SIZE:</b> 7926 subjects were included in the data. This a small subset of the data used in the textbook of 
               Hosmer and Lemeshow. <BR><BR>
@@ -465,9 +654,7 @@ NationalHealthNutritionSurvey-description.pdf </a> <BR>
 <!--  oooooooooooooooooooooooooooooooooo -->
                                  
 <h3 id="bankruptcy"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">K.  Bankruptcy Data</h3>
-<BR><BR>
-
-<b>TYPE:</b> Observational Data<BR><BR>
+<BR>
     
 <b> SIZE:</b> Five years data. Each data has about 10000 observations and each data set has 64 variables. <BR><BR>
     
@@ -504,9 +691,7 @@ NationalHealthNutritionSurvey-description.pdf </a> <BR>
 <!--  oooooooooooooooooooooooooooooooooo -->
 
 <h3 id="bankmarketing"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">L. Bank Direct Marketing Data</h3>
-<BR><BR>
-    
-<b>TYPE:</b> (Prospective) Observational Health Study<BR><BR>
+<BR>
     
 <b> SIZE:</b> 45223 records and 17 variables (including the outcome variable) <BR><BR>
     
@@ -537,9 +722,7 @@ Background and Variable Definitions </a> <BR>
 <!--  oooooooooooooooooooooooooooooooooo -->
 
 <h3 id="employeeturnover"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">M. Employee Turnover Data: People Analytics Data</h3>
-<BR><BR>
-    
-<b>TYPE:</b> (Prospective) Observational People Analytics Data<BR><BR>
+<BR>
     
 <b> SIZE:</b> 1129 records and 16 variables  <BR><BR>
     
@@ -569,9 +752,7 @@ Background and Variable Definitions </a> <BR>
 <!--  oooooooooooooooooooooooooooooooooo -->
 
 <h3 id="employeeattrition"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">N. Employee Attrition Data: People Analytics Data (Synthetic)</h3>
-<BR><BR>
-    
-<b>TYPE:</b> Synthetic People Analytics Data<BR><BR>
+<BR>
     
 <b> SIZE:</b> 1470 records and 35 variables  <BR><BR>
     
@@ -591,149 +772,73 @@ With these variables, IBM has created a fairly complete overview that contains t
  Variable Definitions </a> <BR>
     
 2. Data Set: <a href="EmployeeAttrition/EmployeeAttritionData.csv">Employee Attrition Data</a> <BR><BR>
-</left><hr>         
+ <hr>         
        
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->        
-<h1 id="wrangling" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Data Preparation</b></h1>
-<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo --> 
-<hr><br>
-    
-    
+         
 <!--  oooooooooooooooooooooooooooooooooo -->
-<!--        Survey Instruments           -->
-<!--  oooooooooooooooooooooooooooooooooo -->
-                                 
-<h3 id="survey"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">A. Self-compassion and Gratitude Survey Data</h3>
-<br>
-    
-<b>TYPE:</b> Survey data<BR><BR>
-    
-<b> SIZE:</b>119 observations.  12 demographic variables, 12 variables in self-compassion instrument, and 6 in gratitude instrument.<BR><BR>
-    
-<b> SOURCE: </b> One of my recent research projects.<BR><BR>
-    
-<b> BRIEF DESCRIPTION:</b> This is a survey taken from students in the social work program at a regional university. Students are invited to answer the survey questions voluntarily. The survey contains two different survey instruments and some demographic questions as well.<BR><BR>
-    
-1. The Self-Compassion Scale by Neff <br>
-2. The Gratitude Questionnaire 6<BR><BR>
-The purpose is to study the perception of self-compassion in
-students and how it can link to self-care as well as success in their future professional life. <BR><BR>
-    
-<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
-1. Data set: <a href="Self-compasion-gratitude-SurveyDataCsv.csv"> Self-compasion-gratitude-SurveyDataCsv.csv </a> <BR>
-2. Survey instruments: <a href="Selfcompassion-Survey-Instrument.pdf">Selfcompassion-Survey-Instrument.pdf</a> <BR>
-3. Data Dictionary: <a href="Selfcompassion-data-dictionary.pdf">Selfcompassion-data-dictionary.pdf</a> <BR><BR>
-</left><hr>
-
-
-<!--  oooooooooooooooooooooooooooooooooo -->
-<!--     Covid and related Data Sets     -->
+<!--        Diabetes Prediction           -->
 <!--  oooooooooooooooooooooooooooooooooo -->
 
-<h3 id="covid"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">B. COVID-19 Related Data Sets</h3><br>
-
-<b>TYPE:</b> Census/Observational/Secondary aggregated data <BR><BR>
+<h3 id="diabetespred"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">O. Diabetes Prediciton</h3>
+<BR>
     
-<b> SIZE:</b> Different data sets have different sizes. The range is from several thousand to several million. Some data sets are currently updating.<BR><BR>
+<b> SIZE:</b> 100001 records and 9 variables  <BR><BR>
     
-<b> SOURCE: </b> Multiple data sources: NYT COVID-19 data repository, CDC data, and USDA Economic Research Service data.<BR><BR>
+<b> SOURCE: </b>  <a href="https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset">
+				   https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset</a> <BR><BR>
     
-<b> BRIEF DESCRIPTION:</b> These data sets can be used to address the potential association between COVID-19 infection/death rates associated with related variables such as vaccination rates as well as other related demographic variables such as poverty, unemployment, education, etc.<BR><BR>
+<b> BRIEF DESCRIPTION:</b> The Diabetes prediction dataset is a collection of medical and demographic data from patients, along with their diabetes status (positive or negative). The data includes features such as age, gender, body mass index (BMI), hypertension, heart disease, smoking history, HbA1c level, and blood glucose level. This dataset can be used to build machine learning models to predict diabetes in patients based on their medical history and demographic information. This can be useful for healthcare professionals in identifying patients who may be at risk of developing diabetes and in developing personalized treatment plans. Additionally, the dataset can be used by researchers to explore the relationships between various medical and demographic factors and the likelihood of developing diabetes.
+<BR><BR>
     
-<b>DOWNLOAD:</b> The following links provide data downloaded on August 12, 2021.<br><br>
+<b>DOWNLOAD:</b> Data set and description are can downloaded in the following links:<br><br>
     
-1. Unemployment data: <a href="Unemployment.csv"> Unemployment.csv </a><BR>
-2. Poverty data: <a href="PovertyEstimates.csv"> PovertyEstimates.csv</a><BR>
-3. 10-year mortality data: <a href="PopulationEstimates.csv"> Mortality-Estimates.csv </a><BR>
-4. Education level data: <a href="Education.csv"> Education.csv </a><BR>
-5. Population density data: <a href="census-population-landarea.csv"> census-population-landarea.csv </a><BR>
-6. Income data: <a href="est-income-19all.xls"> est-income-19all.xls </a><BR>
-7. Presidential election data: <a href="countypresidential_election_2000-2020.csv">countypresidential_election_2000-2020.csv</a><BR>
-8. FIPS to Latitude and Longitude Conversion Table: <a href="fips2geocode.csv">fips2latlon.csv</a><BR><BR>
-
-
-<b>SOME DIRECT LINKS:</b> You can download the most recent updated data using the following direct links<br><br>
-1. NYT COVID-19 data repository:<a href="https://github.com/nytimes/covid-19-data/tree/master/live"> us-counties (live updating) </a><BR>
-2. USDA county-level demographic data:<a href="https://www.ers.usda.gov/data-products/county-level-data-sets/">  County-level Data Sets </a><BR>
-3. CDC vaccination data:<a href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh"> County-level vaccination data (live updating) </a><BR>
-4. CDC COVID-19 surveillance:<a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf/data"> COVID-19 Case Surveillance Public Use Data (live updating) </a> 
-(nearly 28 million records at individual level, 3.4GB)<BR>
-5. MIT Election Lab Data Sets: <a href="https://electionlab.mit.edu/data"> Presidential Election Data</a>
-</left>
-
+1. Data Description: <a href="bin-DiabetesPred/DescriptionDiabetesPrediction.pdf"> 
+ Variable Definitions </a> <BR>
     
-<hr>    
-<!--  oooooooooooooooooooooooooooooooooo -->
-<!--        Customer Segmentation        -->
-<!--  oooooooooooooooooooooooooooooooooo -->
-                                 
-<h3 id="cust-seg"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">C. Customer Segmentation Data</h3>
-<br>
-    
-<b>TYPE:</b> Observational data<BR><BR>
-    
-<b> SIZE:</b>330379 observations.  8 variables.<BR><BR>
-    
-<b> SOURCE: </b>  <b>Book</b> - Applied Analytics through Case Studies Using SAS and R,  Deepti Gupta by APress, ISBN - 978-1-4842-3525-6<BR><BR>
-    
-<b> BRIEF DESCRIPTION:</b> This is a data set extract from an orgnization that can be used to divid customers into groups of individuals that have similar characteristics (factors) for marketing, or improving customer satisfaction, etc.<BR><BR>
-    
-<b>DOWNLOAD:</b> The data set and variable descrition can be downloaded using the following links.<br><br>
-    
-1. Data set: <a href="CustomerSegmentation/Customer-Seg-Data.csv"> Segmentation Data.csv </a> <BR>
-3. Data Dictionary: <a href="CustomerSegmentation/Description-customer-Seg.pdf">Segmentation Data Description.pdf</a> <BR><BR>
-</left>
-    
-    
-<hr>    
-<!--  oooooooooooooooooooooooooooooooooo -->
-<!--        Pet Care Data Set        -->
-<!--  oooooooooooooooooooooooooooooooooo -->
-                                     
-<h3 id="pet-care"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">D. Pet Care Data</h3>
-<br>
-    
-<b>TYPE:</b> Observational data<BR><BR>
-    
-<b> SIZE:</b>330379 observations.  8 variables.<BR><BR>
-    
-<b> SOURCE: </b> <a href="https://www.superdatascience.com/pages/sql">https://www.superdatascience.com/pages/sql</a> <BR><BR>
-    
-<b> BRIEF DESCRIPTION:</b> Four relational data tables that contain pet information, owner information, precedure history, and procedure detail.<BR><BR>
-    
-<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
-    
-1. <a href="PetCareData/PetsInfomation.csv"> Pet Information </a> <BR>
-2 <a href="PetCareData/PetsOwners.csv">Owner Information</a> <BR>
-3. <a href="PetCareData/ProceduresDetails.csv"> Procedure Detail </a> <BR>
-4. <a href="PetCareData/ProceduresHistory.csv">Procedure History</a> <BR><BR>
-</left>
-    
+2. Data Set: <a href="bin-DiabetesPred/diabetes_prediction_dataset.csv">Diabetes Data</a> <BR><BR>
+ <hr>         
        
+         
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Diabetes Prediction           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+
+<h3 id="strokepred"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">P. Strokes Prediciton</h3>
+<BR>
+    
+<b> SIZE:</b> 5110 records and 12 variables  <BR><BR>
+    
+<b> SOURCE: </b>  <a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths.
+This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient.
+<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and description are can downloaded in the following links:<br><br>
+    
+1. Data Description: <a href="bin-StrokePred/DescriptionStrokePrediction.pdf"> 
+ Variable Definitions </a> <BR>
+    
+2. Data Set: <a href="bin-StrokePred/healthcare-dataset-stroke-data.csv">Strokes Data</a> <BR><BR>
+ <hr>                 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ 
     
     
-    
-    
-    
-    
-    
-    
+        
 <br>
  <hr>
 <h1 id="continuous" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Continous Response</b></h1>
@@ -749,9 +854,6 @@ students and how it can link to self-care as well as success in their future pro
                                  
 <h3 id="cal-housing"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">A. California Housing Price Data</h3>
 <br>
-    
-    
-<b>TYPE:</b> Observational Data<BR><BR>
                                  
 <b> SIZE:</b> 20640 records, 10 feature variables.<BR><BR>
                                  
@@ -763,8 +865,7 @@ students and how it can link to self-care as well as success in their future pro
 1. Data set: <a href="ca-housing-price.csv"> California Housing Price Data.csv </a> <BR> This data set can also be found at <a href = "https://www.kaggle.com/harrywang/housing-price-prediction/data">https://www.kaggle.com/harrywang/housing-price-prediction/data</a>
                                  
 2. Data Dictionary: <a href="ca-housing-price.pdf">California Housing Price Data Description</a> <BR>
-</left>
-                                
+                         
 
     <hr>
 <!--  oooooooooooooooooooooooooooooooooo -->
@@ -773,7 +874,6 @@ students and how it can link to self-care as well as success in their future pro
                                  
 <h3 id="taibei-housing"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">B. Taipei Real Estate Data</h3>
 <br>
-<b>TYPE:</b> Observational Data<BR><BR>
                                  
 <b> SIZE:</b> 414 records, 8 feature variables.<BR><BR>
                                  
@@ -787,7 +887,7 @@ students and how it can link to self-care as well as success in their future pro
 1. Data set: <a href="Realestate.csv"> Taipei Real Estate Data.csv </a> <BR> 
                                  
 2. Data Dictionary: <a href="realestate.pdf">Taipei Real Estate Data Description</a> <BR>
-</left><hr>
+ <hr>
                                                            
       
     
@@ -799,8 +899,6 @@ students and how it can link to self-care as well as success in their future pro
 <h3 id="life-exp"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">C. World Life Expectancy Data</h3>
 <br>
     
-<b>TYPE:</b> Observational Data<BR><BR>
-                                 
 <b> SIZE:</b> There four related data files to be used to create data visualization.<BR><BR>
                                  
 <b> SOURCE: </b> Data from public domain. <BR><BR>
@@ -838,7 +936,7 @@ students and how it can link to self-care as well as success in their future pro
 2. <a href="life_expectancy_years.csv">Life Expectancy in Years.csv</a> <BR>
 3. <a href="population_total.csv"> Population Size.csv </a> <BR> 
 4. <a href="countries_total.csv"> Country Regions.csv </a> 
-</left><hr>                        
+ <hr>                        
 
 <!--  oooooooooooooooooooooooooooooooooo -->
 <!--           Flight Delay Data         -->
@@ -846,7 +944,7 @@ students and how it can link to self-care as well as success in their future pro
                                  
 <h3 id="flight-delay"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">D. Flight Delay Data</h3>
 <br>
-<b>TYPE:</b> Observational Data<BR><BR>
+    
                                  
 <b> SIZE:</b> 3593 records, 11 feature variables.<BR><BR>
                                  
@@ -862,7 +960,7 @@ students and how it can link to self-care as well as success in their future pro
 2. Data Dictionary: <a href="FlightDelay/Description-%20flight_delay-data.pdf">Flight Delay Data Description</a> <BR>
         
         
-</left><hr>                        
+ <hr>                        
 
 <!--  oooooooooooooooooooooooooooooooooo -->
 <!--    Melbourne Housing Market         -->
@@ -870,7 +968,7 @@ students and how it can link to self-care as well as success in their future pro
                                  
 <h3 id="melbourne-house"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">E. Melbourne Housing Market</h3>
 <br>
-<b>TYPE:</b> Observational Data<BR><BR>
+    
                                  
 <b> SIZE:</b> 34857 records, 21 variables.<BR><BR>
                                  
@@ -881,14 +979,11 @@ students and how it can link to self-care as well as success in their future pro
 <br>
                                  
 <b>DOWNLOAD:</b> Data set can be downloaed from the following link:<br><br>
-1. Data set: <a href="MelbourneHousingMarket/MelbourneHousing.csv"> House Price Data  </a> <BR> 
-                                 
+1. Data set: <a href="MelbourneHousingMarket/MelbourneHousing.csv"> House Price Data  </a> <BR>                             
 2. Data Dictionary: <a href="MelbourneHousingMarket/Variable-description.docx">Variable Description</a> <BR>
 
-    
-    
 
-    </left><hr>                        
+    <hr>                        
 
 <!--  oooooooooooooooooooooooooooooooooo -->
 <!--    Melbourne Housing Market         -->
@@ -896,7 +991,7 @@ students and how it can link to self-care as well as success in their future pro
                                  
 <h3 id="hr-data"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">F. HR Data (People Anlytics)</h3>
 <br>
-<b>TYPE:</b> Observational Data<BR><BR>
+    
                                  
 <b> SIZE:</b> 311 records, 36 variables.<BR><BR>
                                  
@@ -912,6 +1007,172 @@ students and how it can link to self-care as well as success in their future pro
 2. Data Dictionary: <a href="HRDataset/HRDataVariableDescription.pdf">Variable Description</a> <BR>
 
    
+     
+       
+
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->        
+<h1 id="multiclass" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Multinomial Response (7)</b></h1>
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo --> 
+<hr><br>
+    
+    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Amazon customer Review       -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="amazon-review"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">A. Amazon Customer Review Data</h3>
+<br>
+    
+    
+<b> SIZE:</b>13194 observations.  4 variables. <BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.kaggle.com/datasets/danielihenacho/amazon-reviews-dataset">https://www.kaggle.com/datasets/danielihenacho/amazon-reviews-dataset</a><BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This dataset was created from the scraped reviews from products in Amazon for the purpose of text classification. The classes are three in number namely; <br><br>
+
+1. Negative Reviews <br>
+2. Neutral Reviews <br>
+2. Positive Reviews. <BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="MclsAmazonReview/cleaned_reviews.csv"> Amazon Review.csv </a> <BR>
+2. Data Dictionary: <a href="MclsAmazonReview/DescriptionAmazonReviewClassification.pdf">Amazon review  data dictionary.pdf</a> <BR><BR>
+ <hr>
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--          Body Performance Data      -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+
+<h3 id="body-performance"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">B. Body Performance Data </h3><br>
+
+    
+<b> SIZE:</b> 13393 obervations and 12 variables. <BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.kaggle.com/datasets/kukuroo3/body-performance-data">https://www.kaggle.com/datasets/kukuroo3/body-performance-data</a>.<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> TThis is data that confirmed the grade of performance with age and some exercise performance data..<BR><BR>
+    
+<b>DOWNLOAD:</b> The following links provide data downloaded on August 12, 2021.<br><br>
+    
+1. Data: <a href="MclsBodyPerformance/bodyPerformance.csv"> MclsBodyPerformance.csv </a><BR>
+2. Description: <a href="MclsBodyPerformance/DescriptionBodyPerformance.pdf"> Description of Body Performance data</a><BR>
+
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--            Customer Churn           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="customer-churn"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">C. Predicting Churn Risk Rate</h3>
+<br>
+    
+    
+<b> SIZE:</b> Training set:  36992 observations and 25variables.<br>
+     Testing set: 19919 observations and 24 variables. <BR><BR>
+    
+<b> SOURCE: </b>  <a href="https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/">https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/</a><BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> Churn rate is a marketing metric that describes the number of customers who leave a business over a specific time period. Every user is assigned a prediction value that estimates their state of churn at any given time. This value is based on:<br>
+1.	User demographic information <br>
+2.	Browsing behavior<br>
+3.	Historical purchase data among other information<br>
+    
+It factors in our unique and proprietary predictions of how long a user will remain a customer. This score is updated every day for all users who have a minimum of one conversion. The values assigned are between 1 and 5.
+<BR><BR>
+    
+<b>DOWNLOAD:</b> The data set and variable descrition can be downloaded using the following links.<br><br>
+    
+1. Datasets: <a href="MclsCustomerChurn/train.csv"> |Training Data.csv </a> |<a href="MclsCustomerChurn/test.csv">Testing Data</a> <BR>
+    
+2. Data Dictionary: <a href="MclsCustomerChurn/DescriptionCustomerChurnData.pdf">Customer Churn Data Description.pdf</a> <BR><BR>
+ 
+
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Customer Segmentation        -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                     
+<h3 id="customer-segmentation"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">D. Customer Segmentation Data</h3>
+<br>
+    
+    
+<b> SIZE:</b> Training data: 8069 observations. 10 variables. <br>
+    Testing data: 2627  observations. 9 variables. <BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.superdatascience.com/pages/sql">https://www.superdatascience.com/pages/sql</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests, and spending habits.
+Companies employing customer segmentation operate under the fact that every customer is different and that their marketing efforts would be better served if they target specific, smaller groups with messages that those consumers would find relevant and lead them to buy something. Companies also hope to gain a deeper understanding of their customer's preferences and needs with the idea of discovering what each segment finds most valuable to more accurately tailor marketing materials toward that segment.
+.<BR><BR>
+    
+<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
+    
+1. Data Sets: <a href="MclsCustSegmentation/train.csv">| Training Data |</a> <a href="MclsCustSegmentation/test.csv">Testing Data |</a> <BR>
+2 <a href="MclsCustSegmentation/DescriptionCustomerSegmentation.pdf">Data Description</a> <BR><BR>
+ 
+     
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--            Dematology Data          -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                     
+<h3 id="dematology"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">E. Dematology Data Set</h3>
+<br>
+    
+    
+<b> SIZE:</b> 366 observations. 35 variables. <BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification">https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The differential diagnosis of "erythemato-squamous" diseases is a real problem in dermatology. They all share the clinical features of erythema and scaling, with minimal differences. The disorders in this group are psoriasis, seborrheic dermatitis, lichen planus, pityriasis rosea, chronic dermatitis, and pityriasis rubra pilaris. Usually, a biopsy is necessary for the diagnosis, but unfortunately, these diseases share many histopathological features as well.<br>
+
+Patients were first evaluated clinically with 12 features. Afterward, skin samples were taken for the evaluation of 22 histopathological features. The values of the histopathological features are determined by an analysis of the samples under a microscope. <br>
+
+
+In the dataset constructed for this domain, the family history feature has the value 1 if any of these diseases has been observed in the family, and 0 otherwise. The age feature simply represents the age of the patient.<br>
+
+Every other feature clinical and histopathological was given a degree in the range of 0 to 3. Here, 0 indicates that the feature was not present, 3 indicates the largest amount possible, and 1, 2 indicate the relative intermediate values.<BR><BR>
+    
+<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
+    
+1. Data Sets: <a href="Mcls-Dermatology/dermatology_database_1.csv">| Dematology Data |</a><BR>
+2 <a href="Mcls-Dermatology/DescriptionDermotologyData.pdf">Data Description</a> <BR><BR>
+ 
+    
+
+        
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--            Healthcare Demand        -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                     
+<h3 id="health-care"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">F. Healthcare Service Demand Data Set</h3>
+<br>
+    
+    
+<b> SIZE:</b> Training Data:  310000 observations. 18 variables.<br>
+              Testing Data: 137058 observations. 17 variables.<BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification">https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The differential diagnosis of "erythemato-squamous" diseases is a real problem in dermatology. They all share the clinical features of erythema and scaling, with minimal differences. The disorders in this group are psoriasis, seborrheic dermatitis, lichen planus, pityriasis rosea, chronic dermatitis, and pityriasis rubra pilaris. Usually, a biopsy is necessary for the diagnosis, but unfortunately, these diseases share many histopathological features as well.<br>
+
+Patients were first evaluated clinically with 12 features. Afterward, skin samples were taken for the evaluation of 22 histopathological features. The values of the histopathological features are determined by an analysis of the samples under a microscope. <br>
+
+
+In the dataset constructed for this domain, the family history feature has the value 1 if any of these diseases has been observed in the family, and 0 otherwise. The age feature simply represents the age of the patient.<br>
+
+Every other feature clinical and histopathological was given a degree in the range of 0 to 3. Here, 0 indicates that the feature was not present, 3 indicates the largest amount possible, and 1, 2 indicate the relative intermediate values.<BR><BR>
+    
+<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following lniks.<br><br>
+    
+1. Data Sets: <a href="Mcls-Dermatology/dermatology_database_1.csv">| Dematology Data |</a><BR>
+2 <a href="Mcls-Dermatology/DescriptionDermotologyData.pdf">Data Description</a> <BR><BR>
+ 
     
     
     
@@ -921,6 +1182,178 @@ students and how it can link to self-care as well as success in their future pro
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->        
+<h1 id="wrangling" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Data Preparation</b></h1>
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo --> 
+<hr><br>
+    
+    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Survey Instruments           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="survey"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">A. Self-compassion and Gratitude Survey Data</h3>
+<br>
+    
+    
+    
+<b> SIZE:</b>119 observations.  12 demographic variables, 12 variables in self-compassion instrument, and 6 in gratitude instrument.<BR><BR>
+    
+<b> SOURCE: </b> One of my recent research projects.<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This is a survey taken from students in the social work program at a regional university. Students are invited to answer the survey questions voluntarily. The survey contains two different survey instruments and some demographic questions as well.<BR><BR>
+    
+1. The Self-Compassion Scale by Neff <br>
+2. The Gratitude Questionnaire 6<BR><BR>
+The purpose is to study the perception of self-compassion in
+students and how it can link to self-care as well as success in their future professional life. <BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="Self-compasion-gratitude-SurveyDataCsv.csv"> Self-compasion-gratitude-SurveyDataCsv.csv </a> <BR>
+2. Survey instruments: <a href="Selfcompassion-Survey-Instrument.pdf">Selfcompassion-Survey-Instrument.pdf</a> <BR>
+3. Data Dictionary: <a href="Selfcompassion-data-dictionary.pdf">Selfcompassion-data-dictionary.pdf</a> <BR><BR>
+ <hr>
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--     Covid and related Data Sets     -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+
+<h3 id="covid"  class="section"  style="text-align:left;  font-size: 1.5em; font-weight: bold">B. COVID-19 Related Data Sets</h3><br>
+
+    
+    
+<b> SIZE:</b> Different data sets have different sizes. The range is from several thousand to several million. Some data sets are currently updating.<BR><BR>
+    
+<b> SOURCE: </b> Multiple data sources: NYT COVID-19 data repository, CDC data, and USDA Economic Research Service data.<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> These data sets can be used to address the potential association between COVID-19 infection/death rates associated with related variables such as vaccination rates as well as other related demographic variables such as poverty, unemployment, education, etc.<BR><BR>
+    
+<b>DOWNLOAD:</b> The following links provide data downloaded on August 12, 2021.<br><br>
+    
+1. Unemployment data: <a href="Unemployment.csv"> Unemployment.csv </a><BR>
+2. Poverty data: <a href="PovertyEstimates.csv"> PovertyEstimates.csv</a><BR>
+3. 10-year mortality data: <a href="PopulationEstimates.csv"> Mortality-Estimates.csv </a><BR>
+4. Education level data: <a href="Education.csv"> Education.csv </a><BR>
+5. Population density data: <a href="census-population-landarea.csv"> census-population-landarea.csv </a><BR>
+6. Income data: <a href="est-income-19all.xls"> est-income-19all.xls </a><BR>
+7. Presidential election data: <a href="countypresidential_election_2000-2020.csv">countypresidential_election_2000-2020.csv</a><BR>
+8. FIPS to Latitude and Longitude Conversion Table: <a href="fips2geocode.csv">fips2latlon.csv</a><BR><BR>
+
+
+<b>SOME DIRECT LINKS:</b> You can download the most recent updated data using the following direct links<br><br>
+1. NYT COVID-19 data repository:<a href="https://github.com/nytimes/covid-19-data/tree/master/live"> us-counties (live updating) </a><BR>
+2. USDA county-level demographic data:<a href="https://www.ers.usda.gov/data-products/county-level-data-sets/">  County-level Data Sets </a><BR>
+3. CDC vaccination data:<a href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh"> County-level vaccination data (live updating) </a><BR>
+4. CDC COVID-19 surveillance:<a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf/data"> COVID-19 Case Surveillance Public Use Data (live updating) </a> 
+(nearly 28 million records at individual level, 3.4GB)<BR>
+5. MIT Election Lab Data Sets: <a href="https://electionlab.mit.edu/data"> Presidential Election Data</a>
+ 
+
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Customer Segmentation        -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="cust-seg"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">C. Customer Segmentation Data</h3>
+<br>
+
+    
+    
+<b> SIZE:</b>330379 observations.  8 variables.<BR><BR>
+    
+<b> SOURCE: </b>  <b>Book</b> - Applied Analytics through Case Studies Using SAS and R,  Deepti Gupta by APress, ISBN - 978-1-4842-3525-6<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This is a data set extract from an orgnization that can be used to divid customers into groups of individuals that have similar characteristics (factors) for marketing, or improving customer satisfaction, etc.<BR><BR>
+    
+<b>DOWNLOAD:</b> The data set and variable descrition can be downloaded using the following links.<br><br>
+    
+1. Data set: <a href="CustomerSegmentation/Customer-Seg-Data.csv"> Segmentation Data.csv </a> <BR>
+3. Data Dictionary: <a href="CustomerSegmentation/Description-customer-Seg.pdf">Segmentation Data Description.pdf</a> <BR><BR>
+ 
+    
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--        Pet Care Data Set        -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                     
+<h3 id="pet-care"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">D. Pet Care Data</h3>
+<br>
+
+    
+    
+<b> SIZE:</b>330379 observations.  8 variables.<BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.superdatascience.com/pages/sql">https://www.superdatascience.com/pages/sql</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> Four relational data tables that contain pet information, owner information, precedure history, and procedure detail.<BR><BR>
+    
+<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following links.<br><br>
+    
+1. <a href="PetCareData/PetsInfomation.csv"> Pet Information </a> <BR>
+2 <a href="PetCareData/PetsOwners.csv">Owner Information</a> <BR>
+3. <a href="PetCareData/ProceduresDetails.csv"> Procedure Detail </a> <BR>
+4. <a href="PetCareData/ProceduresHistory.csv">Procedure History</a> <BR><BR>
+ 
+    
+<hr>    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--  Data Wrangling: Healthcare Data    -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                     
+<h3 id="wrang-healthcare"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">E. Healthcare Data Sets</h3>
+<br>
+
+    
+    
+<b> SIZE:</b> 8 data sets with various sizes and different numbers of variables.<BR><BR>
+    
+<b> SOURCE: </b> <a href="https://www.kaggle.com/datasets/kanikakhera/healthcare-dataset">https://www.kaggle.com/datasets/kanikakhera/healthcare-dataset</a> <BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> These eight different relational data tables can be used for sharpenning data wrangling skills. <BR><BR>
+    
+<b>DOWNLOAD:</b> The data sets (in CSV format) can be downloaded in the following links.<br><br>
+    
+1. <a href="Wrangle-Healthcare/Inpatient_Pat.csv"> Inpatient data - patients </a> <BR>
+2.  <a href="Wrangle-Healthcare/Inpatient_provdr.csv"> Inpatient data - providers</a> <BR>
+3. <a href="Wrangle-Healthcare/Outpatient_Pat.csv"> Outpatient data - patients </a> <BR>
+4. <a href="Wrangle-Healthcare/Outpatient_provdr.csv"> Outpatient data - providers</a><BR> 
+5. <a href="Wrangle-Healthcare/Patient_history_samp.csv"> Paitent history sample data</a> <BR>
+6.  <a href="Wrangle-Healthcare/Review_patient_history_samp.csv">Review patient history sample data</a> <BR>
+7. <a href="Wrangle-Healthcare/Rreview_transaction_coo.csv"> Review transaction counts</a> <BR>
+8. <a href="Wrangle-Healthcare/Transaction_coo.csv">Transaction counts</a><BR>     
+<BR><BR>
+ 
+
+    
+  
 </div>
   
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXXXXXXXXXXX-->
