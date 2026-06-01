@@ -324,19 +324,23 @@
                                             
                 <!--div class="dropdown-navi"-->
                     <center>
-                    <button onclick="myFunction07()" class="dropbtn">Visualization 
-                      <center><font size = 1, color="navy">[Data sets for interactive data visualization]</font></center>
+                    <button onclick="myFunction07()" class="dropbtn">Housing Price Data
+                      <center><font size = 1, color="navy">[Data sets with geocodes]</font></center>
                       </button>
                       </center>
                        <div id="myDropdown07" class="dropdown-content">
-                              <!--li><a href="#survey">A. Survey Data</a></li>
-                              <li><a href="#covid">B. COVID-19 Data Sets</a></li>
-                              <li><a href="#cust-seg">C. Customer Segmentation</a></li>
-                              <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
-                              <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li-->  
+                              <li><a href="#600KUS">A. 600K US Housing Data</a></li>
+                              <li><a href="#Ames">B. Ames Housing Data</a></li>
+                              <li><a href="#Boston">C. Boston Housing Data</a></li>
+                              <li><a href="#California">D. California Housing Data</a></li> 
+                              <li><a href="#KingCounty">E. King County Housing Data</a></li>
+                              <li><a href="#Miami">F. Miami Housing Data</a></li>    
+                              <li><a href="#NY">G. New York Housing Data</a></li>  
+                              <li><a href="#taipei">H. Taipei Housing Data</a></li> 
+                              <li><a href="#melbourne">I. Melbourne Housing Market</a> </li> 
                        </div>
                       
-                <!--div class="dropdown-navi"-->
+                <!--div class="dropdown-navi">
                     <center>
                     <button onclick="myFunction08()" class="dropbtn">Type I Left-censored Data 
                       <center><font size = 1, color="navy">[Estimating Population Distributions]</font></center>
@@ -348,7 +352,7 @@
                               <li><a href="#cust-seg">C. Customer Segmentation</a></li>
                               <li><a href="#pet-care">D. Pet Care Data Set</a></li>    
                               <li><a href="#wrang-healthcare">E. Healthcare Data Sets</a></li-->  
-                       </div>                      
+                       </div-->                      
                 <!--div class="dropdown-navi"-->
                     <center>
                     <button onclick="myFunction098()" class="dropbtn">Correlated Data 
@@ -999,7 +1003,7 @@ This dataset is used to predict whether a patient is likely to get stroke based 
     <hr>                        
 
 <!--  oooooooooooooooooooooooooooooooooo -->
-<!--    Melbourne Housing Market         -->
+<!--     HR People Analytics Data        -->
 <!--  oooooooooooooooooooooooooooooooooo -->
                                  
 <h3 id="hr-data"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">F. HR Data (People Anlytics)</h3>
@@ -1022,7 +1026,7 @@ This dataset is used to predict whether a patient is likely to get stroke based 
    
      
        
-
+<br> 
 <!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->        
 <h1 id="multiclass" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Multinomial Response (7)</b></h1>
 <!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo --> 
@@ -1364,6 +1368,221 @@ students and how it can link to self-care as well as success in their future pro
 8. <a href="Wrangle-Healthcare/Transaction_coo.csv">Transaction counts</a><BR>     
 <BR><BR>
  
+
+
+
+    
+    
+
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->        
+<h1 id="wrangling" class="section"  style="text-align:center;  font-size: 2em; font-weight: bold"><b>Housing Data</b></h1>
+<!--  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo --> 
+<hr><br>
+    
+    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--     600 K US Housing Data           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="600KUS"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">A. 600K US Housing Data</h3>
+<br>
+    
+<b> SIZE:</b>600K + observations. 28 variables<BR><BR>
+    
+<b> SOURCE: </b> From Kaggle (<a href="https://www.kaggle.com/datasets/polartech/500000-us-homes-data-for-sale-properties">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This dataset is for learning and educational purposes <BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/600KUSHousingData/600K US Housing Properties.csv"> 600KUSHousingData.csv </a> <BR>
+2. Data Description: <a href="geocode/600KUSHousingData/600K-USHousingProperties.pdf">600K-USHousingProperties.pdf</a> <BR><BR>
+ <hr>
+
+    
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--         Ames Housing Data           -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="Ames"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">B. Ames Housing Data</h3>
+<br>
+    
+<b> SIZE:</b>2,930 observations. 79 variables. Geocodes are included.BR><BR>
+    
+<b> SOURCE: </b> Modified from Kaggle (<a href="https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The Ames Housing Dataset is a well-known dataset in the field of machine learning and data analysis. 
+It contains various features and attributes of residential homes in Ames, Iowa, USA. The dataset is often used for regression tasks, 
+particularly for predicting housing prices. <BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/AmesHousingData/AmesHousing.csv"> AmesHousing.csv </a> <BR>
+2. Data Description: <a href="geocode/AmesHousingData/AboutAmesDataset.pdf">About Ames Dataset.pdf</a> <BR><BR>
+ <hr>
+
+
+ 
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--         Boston Housing Data         -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+    <h3 id="Boston"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">C. Boston Housing Data</h3>
+    <br>
+        
+<b> SIZE:</b> 506  observations. 14 variables. Geocodes are included.<BR><BR>
+    
+<b> SOURCE: </b> Modified from Kaggle (<a href="https://www.kaggle.com/datasets/altavish/boston-housing-dataset">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The Boston Housing Dataset is derived from information collected by the U.S. 
+Census Bureau concerning housing in the area of Boston, MA. It originated from the UCI Machine Learning Repository. 
+The Boston housing data was collected in 1978 and each of the 506 entries represent aggregated data about 14 features 
+for homes from various suburbs in Boston, Massachusetts.Some missing values and outlisers are present.<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/Boston/BostonHousing.csv"> BostonHousing.csv </a> <BR>
+2. Data Description: <a href="geocode/Boston/TheBostonHousingDataset.pdf">About Boston Dataset.pdf</a> <BR><BR>
+ <hr>
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--       California Housing Data       -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+    <h3 id="California"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">D. California Housing Data</h3>
+    <br>
+        
+<b> SIZE:</b> 20,640  observations. 10 variables. Geocodes are included.<BR><BR>
+    
+<b> SOURCE: </b> From Kaggle (<a href="https://www.kaggle.com/datasets/camnugent/california-housing-prices">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This is the dataset used in the second chapter of Aurélien Géron's recent book 'Hands-On Machine learning with Scikit-Learn and TensorFlow'. 
+It serves as an excellent introduction to implementing machine learning algorithms because it requires rudimentary data cleaning, 
+has an easily understandable list of variables and sits at an optimal size between being to toyish and too cumbersome.
+
+The data contains information from the 1990 California census. So although it may not help you with predicting current housing prices 
+like the Zillow Zestimate dataset, it does provide an accessible introductory dataset for teaching people about the basics of machine learning.<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/CaliforniaHousing/CaliforniaHousing.csv"> CaliforniaHousing.csv </a> <BR>
+2. Data Description: <a href="geocode/CaliforniaHousing/AboutCaliforniaDatafile.pdf">About California Dataset.pdf</a> <BR><BR>
+ <hr>
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--      King County Housing Data       -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+    <h3 id="KingCounty"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">E. King County Housing Data</h3>
+    <br>
+        
+<b> SIZE:</b> 21613 observations. 21 variables. Geocodes are included.<BR><BR>
+    
+<b> SOURCE: </b> Modified from Kaggle (<a href="https://www.kaggle.com/datasets/vallabhadattap/kingcountyhousing">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This data set contains the data of the homes sold between 2014 & 2015 and is provided by King county housing, Washington.
+The data contains 21613 rows and 21 columns i.e., it contains 21613 observations with 21 variables. Estimated file size is 2.4 MB (2457 kb). The data 
+contains variables like unique home ID for sale, date of sale and 18 other home features (like no. of bedrooms, bathrooms, sq feet etc.).<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/KingsCountyHousingPrices/house_data.csv"> house_data.csv </a> <BR>
+2. Data Description: <a href="geocode/KingsCountyHousingPrices/AboutKingCountyDataset.pdf">AboutKingCountyDataset.pdf</a> <BR><BR>
+ <hr>
+
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--         Miami Housing Data          -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+    <h3 id="Miami"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">F. Miami Housing Data</h3>
+    <br>
+        
+<b> SIZE:</b>  13,932  observations. 17 variables. Geocodes are included.<BR><BR>
+    
+<b> SOURCE: </b> Modified from Kaggle (<a href="https://www.kaggle.com/datasets/deepcontractor/miami-housing-dataset">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> The dataset contains information on 13,932 single-family homes sold in Miami .<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/MiamiHousingPrices/miami-housing.csv"> Miami-housing.csv </a> <BR>
+2. Data Description: <a href="geocode/MiamiHousingPrices/AboutMiamiDataset.pdf">AboutMiamiDataset.pdf</a> <BR><BR>
+ <hr>
+
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--         NY Housing Data          -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+    <h3 id="NY"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">G. New York Housing Data</h3>
+    <br>
+        
+<b> SIZE:</b>  4801  observations. 17 variables. Geocodes are included.<BR><BR>
+    
+<b> SOURCE: </b> Modified from Kaggle (<a href="https://www.kaggle.com/datasets/nelgiriyewithana/new-york-housing-market">link</a>).<BR><BR>
+    
+<b> BRIEF DESCRIPTION:</b> This dataset contains prices of New York houses, providing valuable insights into the real estate market in the region. 
+It includes information such as broker titles, house types, prices, number of bedrooms and bathrooms, property square footage, addresses, 
+state, administrative and local areas, street names, and geographical coordinates.<BR><BR>
+    
+<b>DOWNLOAD:</b> Data set and related files can be downloaded in the following links:<br><br>
+1. Data set: <a href="geocode/NY-HousingPrices/NY-House-Dataset.csv"> NY-House-Dataset.csv </a> <BR>
+2. Data Description: <a href="geocode/NY-HousingPrices/AboutNYHousingDataset.pdf">AboutNYHousingDatase.pdf</a> <BR><BR>
+ <hr>
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--     Taibei Real Estate Data         -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="taipei"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">H. Taipei Real Estate Data</h3>
+<br>
+                                 
+<b> SIZE:</b> 414 records, 8 feature variables.<BR><BR>
+                                 
+<b> SOURCE: </b> Data from Kaggle. https://www.kaggle.com/datasets/noir1112/taiwan-real-estate-prices-and-features-dataset<BR><BR>
+                                 
+<b> BRIEF DESCRIPTION:</b>This dataset contains information on real estate transactions in a specific area, including 
+details such as the age of the house, proximity to public transportation, and number of 
+nearby convenience stores. The target variable is the price per unit area, measured in 
+thousands of dollars. This dataset is ideal for regression analysis, price prediction 
+modeling, and exploratory data analysis to understand factors influencing real estate 
+prices.  This data set can be used for regression mmodeling.<br>
+                       
+<br>
+                                 
+<b>DOWNLOAD:</b> Data set can be downloaed from the following link:<br><br>
+1. Data set: <a href="geocode/Taipei/Realestate.csv"> Taipei Real Estate Data.csv </a> <BR> 
+2. Data Dictionary: <a href="geocode/Taipei/realestate.pdf">Taipei Real Estate Data Description</a> <BR>
+ <hr>
+       
+
+
+<!--  oooooooooooooooooooooooooooooooooo -->
+<!--    Melbourne Housing Market         -->
+<!--  oooooooooooooooooooooooooooooooooo -->
+                                 
+<h3 id="melbourne"  class="section"   style="text-align:left;  font-size: 1.5em; font-weight: bold">I. Melbourne Housing Market</h3>
+<br>
+    
+                                 
+<b> SIZE:</b> 34857 records, 21 variables. Geocodes are included.<BR><BR>
+                                 
+<b> SOURCE: </b>  <b>Kaggle</b> - https://www.kaggle.com/datasets/anthonypino/melbourne-housing-market <BR><BR> 
+                                 
+<b> BRIEF DESCRIPTION:</b> This data was scraped from publicly available results posted every week from Domain.com.au,  
+The dataset includes Address, Type of Real estate, Suburb, Method of Selling, Rooms, Price, Real Estate Agent, 
+Date of Sale and distance from C.B.D.<br>
+                       
+<br>
+                                 
+<b>DOWNLOAD:</b> Data set can be downloaed from the following link:<br><br>
+1. Data set: <a href="geocode/MelbourneHousingMarket/MelbourneHousing.csv"> House Price Data  </a> <BR>                             
+2. Data Dictionary: <a href="geocode/MelbourneHousingMarket/Variable-description.docx">Variable Description</a> <BR>
+
+<hr>                        
+
+
+
 
     
   
